@@ -1,6 +1,14 @@
-const vase = document.getElementById("vase");
-const bouquet = document.getElementById("bouquet");
+// Etkileşim eklemek için
+document.querySelectorAll('.berry').forEach(berry => {
+    berry.addEventListener('click', function() {
+        this.style.transform = 'scale(1.5)';
+        setTimeout(() => {
+            this.style.transform = 'scale(1)';
+        }, 300);
+    });
+});
 
-vase.addEventListener("click", () => {
-    bouquet.classList.toggle("show");
+// Sayfa yüklendiğinde animasyon
+window.addEventListener('load', () => {
+    console.log('Kokina buketi hazır! 🎄');
 });
