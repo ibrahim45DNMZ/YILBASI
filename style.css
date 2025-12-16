@@ -1,124 +1,36 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+    background-color: #fafafa;
     text-align: center;
-    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+.area {
+    position: relative;
+    width: 300px;
+    margin: 60px auto;
 }
 
-h1 {
-    color: #d32f2f;
-    margin-bottom: 30px;
-}
-
-.vase {
-    display: inline-block;
-    margin: 20px auto;
+/* Vazo */
+#vazo {
+    width: 200px;
+    cursor: pointer;
+    z-index: 2;
     position: relative;
 }
 
-.vase-body {
-    width: 120px;
-    height: 100px;
-    background: linear-gradient(to right, #8d6e63, #a1887f);
-    border-radius: 10px 10px 0 0;
-    margin: 0 auto;
-}
-
-.vase-top {
-    width: 80px;
-    height: 20px;
-    background: #795548;
-    margin: 0 auto;
-    border-radius: 5px 5px 0 0;
-}
-
-.vase-bottom {
-    width: 100px;
-    height: 10px;
-    background: #5d4037;
-    margin: 0 auto;
-    border-radius: 0 0 10px 10px;
-}
-
-.kokina-branch {
-    width: 2px;
-    height: 100px;
-    background: #2e7d32;
-    margin: 0 auto;
-    position: relative;
-    top: -50px;
-}
-
-.kokina-branch:before,
-.kokina-branch:after {
-    content: '';
+/* Kokina */
+#kokina {
+    width: 220px;
     position: absolute;
-    width: 30px;
-    height: 2px;
-    background: #2e7d32;
-    left: -15px;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%) translateY(80px) scale(0);
+    transition: all 0.7s ease;
+    z-index: 1;
 }
 
-.kokina-branch:before {
-    top: 20px;
-    transform: rotate(-45deg);
+/* Animasyonla çıkma */
+.show {
+    transform: translateX(-50%) translateY(0) scale(1);
 }
 
-.kokina-branch:after {
-    top: 40px;
-    transform: rotate(45deg);
-}
-
-.branch2 {
-    transform: rotate(5deg);
-    margin-left: 20px;
-}
-
-.branch3 {
-    transform: rotate(-5deg);
-    margin-left: -20px;
-}
-
-.berries {
-    position: relative;
-    top: -150px;
-    height: 0;
-}
-
-.berry {
-    width: 12px;
-    height: 12px;
-    background: #d32f2f;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from { box-shadow: 0 0 5px #ff5722; }
-    to { box-shadow: 0 0 15px #ff5722; }
-}
-
-.instructions {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    margin-top: 30px;
-    text-align: left;
-}
-
-ol {
-    padding-left: 20px;
-}
-
-li {
-    margin: 10px 0;
-    color: #388e3c;
-}
