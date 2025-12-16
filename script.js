@@ -107,15 +107,7 @@ function closeBouquet() {
     // Buketi kapat
     bouquet.classList.remove('open');
     
-    // Açık kalma süresini hesapla
-    const elapsedTime = Math.floor((Date.now() - openStartTime) / 1000);
-    openTime += elapsedTime;
-    openTimeElement.textContent = ${openTime}sn;
-    
-    // Açık kalma süresi sayacını durdur
-    stopOpenTimeCounter();
-    
-    // Kar efektini durdur
+   // Kar efektini durdur
     stopSnowEffect();
     
     // Vazo animasyonu
@@ -153,31 +145,7 @@ function updateMaxOpen() {
     }
 }
 
-// ===== MESSAGE SYSTEM =====
-function showMessage(text, icon = "fas fa-info-circle") {
-    // Mevcut ikonu güncelle
-    const messageIcon = document.querySelector('.message-icon');
-    messageIcon.innerHTML = <i class="${icon}"></i>;
-    
-    // Mesaj metnini güncelle
-    messageTextElement.textContent = text;
-    
-    // Mesajı göster
-    messageElement.classList.remove('show');
-    
-    // Reflow tetikle
-    void messageElement.offsetWidth;
-    
-    // Göster
-    messageElement.classList.add('show');
-    
-    // 5 saniye sonra gizle (eğer otomatik modda değilse)
-    if (!isAutoMode) {
-        setTimeout(() => {
-            messageElement.classList.remove('show');
-        }, 5000);
-    }
-}
+
 
 // ===== SNOW EFFECT =====
 function startSnowEffect() {
