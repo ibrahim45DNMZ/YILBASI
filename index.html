@@ -2,28 +2,128 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Kokina Buketi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokina Buketi Animasyonu</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-<h1>Vazoya tıkla ❤️</h1>
-
-<div class="area">
-    <!-- Kokina (başta gizli) -->
-    <img 
-        src="https://i.imgur.com/3dKZLZk.png"
-        id="kokina"
-        alt="Kokina Buketi">
-
-    <!-- Vazo -->
-    <img 
-        src="https://i.imgur.com/9QZ7ZzO.png"
-        id="vazo"
-        alt="Vazo">
-</div>
-
-<script src="script.js"></script>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-holly-berry"></i> Kokina Buketi <i class="fas fa-holly-berry"></i></h1>
+        </header>
+        
+        <main>
+            <div class="scene">
+                <!-- Kar efekti -->
+                <div id="snow-container"></div>
+                
+                <!-- Hediye Kutusu -->
+                <div class="gift-box-container" id="giftBox">
+                    <div class="gift-box">
+                        <div class="gift-box-top"></div>
+                        <div class="gift-box-front"></div>
+                        <div class="gift-box-side"></div>
+                        <div class="gift-ribbon-horizontal"></div>
+                        <div class="gift-ribbon-vertical"></div>
+                        <div class="gift-bow"></div>
+                    </div>
+                </div>
+                
+                <!-- Vazo (hediye kutusu açıldıktan sonra görünür) -->
+                <div class="vase-container" id="vaseContainer" style="display: none;">
+                    <div class="vase">
+                        <div class="vase-neck"></div>
+                        <div class="vase-body"></div>
+                        <div class="vase-bottom"></div>
+                        <div class="vase-shine"></div>
+                    </div>
+                </div>
+                
+                <!-- Kokina Buketi -->
+                <div class="bouquet" id="bouquet">
+                    <!-- Dallar -->
+                    <div class="branch main"></div>
+                    <div class="branch side-1"></div>
+                    <div class="branch side-2"></div>
+                    <div class="branch side-3"></div>
+                    <div class="branch side-4"></div>
+                    <div class="branch side-5"></div>
+                    
+                    <!-- Yapraklar -->
+                    <div class="leaf leaf-1"></div>
+                    <div class="leaf leaf-2"></div>
+                    <div class="leaf leaf-3"></div>
+                    <div class="leaf leaf-4"></div>
+                    <div class="leaf leaf-5"></div>
+                    <div class="leaf leaf-6"></div>
+                    <div class="leaf leaf-7"></div>
+                    <div class="leaf leaf-8"></div>
+                    <div class="leaf leaf-9"></div>
+                    <div class="leaf leaf-10"></div>
+                    
+                    <!-- Kırmızı meyveler/çiçekler -->
+                    <div class="berry berry-1"></div>
+                    <div class="berry berry-2"></div>
+                    <div class="berry berry-3"></div>
+                    <div class="berry berry-4"></div>
+                    <div class="berry berry-5"></div>
+                    <div class="berry berry-6"></div>
+                    <div class="berry berry-7"></div>
+                    <div class="berry berry-8"></div>
+                    <div class="berry berry-9"></div>
+                    <div class="berry berry-10"></div>
+                    <div class="berry berry-11"></div>
+                    <div class="berry berry-12"></div>
+                    <div class="berry berry-13"></div>
+                    <div class="berry berry-14"></div>
+                    <div class="berry berry-15"></div>
+                    
+                    <!-- Parlamalar -->
+                    <div class="sparkle sparkle-1"></div>
+                    <div class="sparkle sparkle-2"></div>
+                    <div class="sparkle sparkle-3"></div>
+                    <div class="sparkle sparkle-4"></div>
+                    <div class="sparkle sparkle-5"></div>
+                    <div class="sparkle sparkle-6"></div>
+                    <div class="sparkle sparkle-7"></div>
+                    <div class="sparkle sparkle-8"></div>
+                    
+                    <!-- Yıldızlar -->
+                    <div class="star star-1"><i class="fas fa-star"></i></div>
+                    <div class="star star-2"><i class="fas fa-star"></i></div>
+                    <div class="star star-3"><i class="fas fa-star"></i></div>
+                    <div class="star star-4"><i class="fas fa-star"></i></div>
+                    <div class="star star-5"><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+            
+            <!-- Mesaj alanı -->
+            <div class="message-container">
+                <div class="message" id="message">
+                    <div class="message-icon"><i class="fas fa-gift"></i></div>
+                    <div class="message-text">Hediye kutusuna tıkla!</div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-text">
+                    <i class="fas fa-tree"></i> Yeni Yıl Kokina Buketi Animasyonu 
+                    <i class="fas fa-tree"></i>
+                </div>
+                <div class="footer-note">
+                    <i class="fas fa-heart"></i> Mutlu ve sağlıklı bir yıl dileğiyle!
+                </div>
+                <div class="footer-credit">
+                    İbrahim Dönmez & Kerem Nuri Akçakaya
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
-
