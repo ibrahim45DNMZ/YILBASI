@@ -2,158 +2,28 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kokina Buketi Animasyonu</title>
+    <title>Kokina Buketi</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-holly-berry"></i> Kokina Buketi <i class="fas fa-holly-berry"></i></h1>
-            <p class="subtitle">Vazoya tıklayarak sihirli kokina buketini aç!</p>
-        </header>
-        
-        <main>
-            <div class="scene">
-                <!-- Kar efekti -->
-                <div id="snow-container"></div>
-                
-                <!-- Vazo -->
-                <div class="vase-container" id="vase">
-                    <div class="vase">
-                        <div class="vase-pattern"></div>
-                        <div class="vase-highlight"></div>
-                    </div>
-                    <div class="vase-label">
-                        <i class="fas fa-hand-pointer"></i> Tıklayarak Aç/Kapat
-                    </div>
-                </div>
-                
-                <!-- Kokina Buketi -->
-                <div class="bouquet" id="bouquet">
-                    <!-- Dallar -->
-                    <div class="branch main"></div>
-                    <div class="branch side-1"></div>
-                    <div class="branch side-2"></div>
-                    <div class="branch side-3"></div>
-                    <div class="branch side-4"></div>
-                    
-                    <!-- Yapraklar -->
-                    <div class="leaf leaf-1"></div>
-                    <div class="leaf leaf-2"></div>
-                    <div class="leaf leaf-3"></div>
-                    <div class="leaf leaf-4"></div>
-                    <div class="leaf leaf-5"></div>
-                    <div class="leaf leaf-6"></div>
-                    
-                    <!-- Kırmızı meyveler -->
-                    <div class="berry berry-1"></div>
-                    <div class="berry berry-2"></div>
-                    <div class="berry berry-3"></div>
-                    <div class="berry berry-4"></div>
-                    <div class="berry berry-5"></div>
-                    <div class="berry berry-6"></div>
-                    <div class="berry berry-7"></div>
-                    <div class="berry berry-8"></div>
-                    
-                    <!-- Parlamalar -->
-                    <div class="sparkle sparkle-1"></div>
-                    <div class="sparkle sparkle-2"></div>
-                    <div class="sparkle sparkle-3"></div>
-                    <div class="sparkle sparkle-4"></div>
-                    <div class="sparkle sparkle-5"></div>
-                    
-                    <!-- Yıldızlar -->
-                    <div class="star star-1"><i class="fas fa-star"></i></div>
-                    <div class="star star-2"><i class="fas fa-star"></i></div>
-                    <div class="star star-3"><i class="fas fa-star"></i></div>
-                </div>
-                
-                <!-- Etkileşim butonları -->
-                <div class="controls">
-                    <button id="auto-btn" class="control-btn">
-                        <i class="fas fa-play"></i> Otomatik Aç/Kapat
-                    </button>
-                    <button id="reset-btn" class="control-btn">
-                        <i class="fas fa-redo"></i> Sıfırla
-                    </button>
-                    <button id="music-btn" class="control-btn">
-                        <i class="fas fa-music"></i> Müzik Aç/Kapat
-                    </button>
-                </div>
-            </div>
-            
-            <!-- İstatistikler -->
-            <div class="stats">
-                <div class="stat-box">
-                    <div class="stat-icon"><i class="fas fa-mouse-pointer"></i></div>
-                    <div class="stat-text">Tıklama Sayısı</div>
-                    <div class="stat-number" id="click-count">0</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
-                    <div class="stat-text">Açık Kalma Süresi</div>
-                    <div class="stat-number" id="open-time">0sn</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-icon"><i class="fas fa-expand-alt"></i></div>
-                    <div class="stat-text">Maksimum Açıklık</div>
-                    <div class="stat-number" id="max-open">0%</div>
-                </div>
-            </div>
-            
-            <!-- Mesaj alanı -->
-            <div class="message-container">
-                <div class="message" id="message">
-                    <div class="message-icon"><i class="fas fa-gift"></i></div>
-                    <div class="message-text">Vazoya tıklayarak kokina buketini açın!</div>
-                </div>
-            </div>
-            
-            <!-- Talimatlar -->
-            <div class="instructions">
-                <h3><i class="fas fa-info-circle"></i> Nasıl Kullanılır?</h3>
-                <div class="instruction-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-text">Mavi vazoya tıklayın veya dokunun</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-text">Kokina buketi açılacak ve animasyon başlayacak</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-text">Tekrar tıklayarak kapatabilirsiniz</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <div class="step-text">Butonlarla ekstra özellikleri kullanın</div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        
-        <footer>
-            <div class="footer-content">
-                <div class="footer-text">
-                    <i class="fas fa-tree"></i> Yeni Yıl Kokina Buketi Animasyonu 
-                    <i class="fas fa-tree"></i>
-                </div>
-                <div class="footer-note">
-                    <i class="fas fa-heart"></i> Mutlu ve sağlıklı bir yıl dileğiyle!
-                </div>
-            </div>
-        </footer>
-    </div>
-    
-    <!-- Audio element for background music -->
-    <audio id="bg-music" loop>
-        <source src="https://assets.mixkit.co/music/preview/mixkit-jingle-bells-311.mp3" type="audio/mpeg">
-    </audio>
-    
-    <!-- Scripts -->
-    <script src="script.js"></script>
+
+<h1>Vazoya tıkla ❤️</h1>
+
+<div class="area">
+    <!-- Kokina (başta gizli) -->
+    <img 
+        src="https://i.imgur.com/3dKZLZk.png"
+        id="kokina"
+        alt="Kokina Buketi">
+
+    <!-- Vazo -->
+    <img 
+        src="https://i.imgur.com/9QZ7ZzO.png"
+        id="vazo"
+        alt="Vazo">
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
